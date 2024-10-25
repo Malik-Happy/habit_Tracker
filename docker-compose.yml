@@ -7,7 +7,7 @@ services:
     container_name: habit-tracker-node
     entrypoint: 'node /bin/www'
     ports:
-      - "8000:80"   # Maps container port 80 to host port 8000
+      - "8000"   # Maps container port 80 to host port 8000
     environment:
       - NODE_ENV=production
       - PORT=80             # Internal port the app will run on
