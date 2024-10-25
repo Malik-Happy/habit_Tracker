@@ -13,5 +13,7 @@ WORKDIR /usr/src/app/client
 RUN npm install
 RUN npm run build
 
+EXPOSE 8000
+
 # Run the app
 CMD ["node", "server.js"]
