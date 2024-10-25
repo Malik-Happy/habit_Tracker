@@ -1,19 +1,13 @@
-# Use Node.js 16 LTS version instead of the latest to avoid compatibility issues
-FROM node:16
+FROM node:latest
 
-# Create app directory
+#Create app directory
 WORKDIR /usr/src/app
 
-# Bundle app source
+#Bundle app source
 COPY . .
 
-# Build the client app
-RUN npm install
-WORKDIR /usr/src/app/client
-RUN npm install
-RUN npm run build
+#Build the client app
+RUN npm install && cd client && npm install && npm run build
 
-EXPOSE 8000
-
-# Run the app
-CMD ["node", "server.js"]
+#Run the app
+CMD ["node", "server.js"
