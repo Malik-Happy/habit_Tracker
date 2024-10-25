@@ -13,7 +13,7 @@ COPY . .
 # Build the client app
 RUN npm install && cd client && npm install && npm run build
 
-Expose 8000
+EXPOSE 8000
 
 # Run the app
 CMD ["node", "server.js"]
